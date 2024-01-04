@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/copyicon.svg</file>
+    <file>icons/invisibleicon.svg</file>
+    <file>keyicon.ico</file>
+    <file>icons/mainicon.svg</file>
+    <file>icons/refreshicon.svg</file>
+    <file>icons/visibleicon.svg</file>
+  </qresource>
+</RCC>
