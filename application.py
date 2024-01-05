@@ -32,14 +32,8 @@ class Generator(QMainWindow):
 
 
     def get_characters(self) -> str:
-        chars = ""
+        return ''.join(btn.value for btn in buttons.Characters if getattr(self.ui, btn.name).isChecked())
 
-        for btn in buttons.Characters:
-            if getattr(self.ui, btn.name).isChecked():
-                chars += btn.value
-
-        return chars
-    
 
     def set_password(self) -> None:
         try:
