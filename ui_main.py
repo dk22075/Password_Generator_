@@ -241,7 +241,7 @@ class Ui_MainWindow(object):
 "    margin-left: 0;\n"
 "}")
         icon2 = QIcon()
-        icon2.addFile(u":/icons/refreshicon.svg", QSize(), QIcon.Normal, QIcon.On)
+        icon2.addFile(u":/icons/copyicon.svg", QSize(), QIcon.Normal, QIcon.On)
         self.button_copy.setIcon(icon2)
         self.button_copy.setIconSize(QSize(52, 52))
 
@@ -264,7 +264,7 @@ class Ui_MainWindow(object):
 "    margin-left: 0;\n"
 "}")
         icon3 = QIcon()
-        icon3.addFile(u":/icons/copyicon.svg", QSize(), QIcon.Normal, QIcon.On)
+        icon3.addFile(u":/icons/refreshicon.svg", QSize(), QIcon.Normal, QIcon.On)
         self.button_refresh.setIcon(icon3)
         self.button_refresh.setIconSize(QSize(42, 42))
 
