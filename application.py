@@ -51,31 +51,17 @@ class Generator(QMainWindow):
         except IndexError:
             self.ui.line_password.clear()
 
-        self.set_entropy()
         self.set_strength()
 
-
+    # Funkcija, kas atgriež summu no vērtībām, kas atbilst atlasītajiem pogām interfeisā     
     def get_character_number(self) -> int:
-        num = 0
-
-        for btn in buttons.CHARACTER_NUMBER.items():
-            if getattr(self.ui, btn[0]).isChecked():
-                num += btn[1]
-
-        return num
-
-
-    def set_entropy(self) -> None:
-        length = len(self.ui.line_password.text())
-        char_num = self.get_character_number()
- 
+        return sum(value for btn, value in buttons.CHARACTER_NUMBER.items() if getattr(self.ui, btn).isChecked())
 
 
 
     def set_strength(self) -> None:
         length = len(self.ui.line_password.text())
         char_num = self.get_character_number()
-        # entropy = self.set_entropy()
 
         for strength in password.StrengthToEntropy:
             if password.get_entropy(length, char_num) >= strength.value:
