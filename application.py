@@ -37,15 +37,12 @@ class Generator(QMainWindow):
 
     def set_password(self) -> None:
         try:
-            self.ui.line_password.setText(
-                password.create_new(
-                    length=self.ui.slider_length.value(),
-                    characters=self.get_characters())
-            )
+            self.ui.line_password.setText(password.create_new(length=self.ui.slider_length.value(), characters=self.get_characters()))
         except IndexError:
             self.ui.line_password.clear()
 
         self.set_strength()
+
 
     # Funkcija, kas atgriež summu no vērtībām, kas atbilst atlasītajiem pogām interfeisā     
     def get_character_number(self) -> int:
