@@ -4,11 +4,10 @@ from enum import IntEnum
 
 
 class StrengthToEntropy(IntEnum):
-    Pathetic = 0
-    Weak = 30
-    Good = 50
-    Strong = 70
-    Excellent = 120
+    Weak = 0
+    Good = 30
+    Strong = 50
+    Powerful = 70
 
 def create_new(length: int, characters: str) -> str:
     return "".join(secrets.choice(characters) for _ in range(length))
