@@ -49,14 +49,12 @@ class Generator(QMainWindow):
         return sum(value for btn, value in buttons.CHARACTER_NUMBER.items() if getattr(self.ui, btn).isChecked())
 
 
-
     def set_strength(self) -> None:
         length = len(self.ui.line_password.text())
         char_num = self.get_character_number()
 
-        for strength in password.StrengthToEntropy:
-            if password.get_entropy(length, char_num) >= strength.value:
-                self.ui.label_strength.setText(f"Strength: {strength.name}")
+        strength = next(strength for strength in password.StrengthToEntropy if password.get_entropy(length, char_num) >= strength.value)
+        self.ui.label_strength.setText(f"Strength: {strength.name}")
 
 
     def change_password_visibility(self) -> None:
