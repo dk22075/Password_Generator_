@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(618, 381)
+        MainWindow.resize(618, 382)
         icon = QIcon()
         icon.addFile(u":/icons/keyicon.ico", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -114,7 +114,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayoutWidget = QWidget(self.centralwidget)
         self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
-        self.horizontalLayoutWidget.setGeometry(QRect(11, 311, 441, 57))
+        self.horizontalLayoutWidget.setGeometry(QRect(10, 270, 441, 57))
         self.layout_length = QHBoxLayout(self.horizontalLayoutWidget)
         self.layout_length.setObjectName(u"layout_length")
         self.layout_length.setContentsMargins(0, 0, 0, 0)
@@ -169,7 +169,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayoutWidget_2 = QWidget(self.centralwidget)
         self.horizontalLayoutWidget_2.setObjectName(u"horizontalLayoutWidget_2")
-        self.horizontalLayoutWidget_2.setGeometry(QRect(10, 130, 441, 111))
+        self.horizontalLayoutWidget_2.setGeometry(QRect(10, 40, 441, 161))
         self.layout_password = QHBoxLayout(self.horizontalLayoutWidget_2)
         self.layout_password.setObjectName(u"layout_password")
         self.layout_password.setContentsMargins(0, 0, 0, 0)
@@ -241,7 +241,7 @@ class Ui_MainWindow(object):
 "    margin-left: 0;\n"
 "}")
         icon2 = QIcon()
-        icon2.addFile(u":/icons/copyicon.svg", QSize(), QIcon.Normal, QIcon.On)
+        icon2.addFile(u":/icons/copyicon.svg", QSize(), QIcon.Normal, QIcon.On) # /copyicon.svg
         self.button_copy.setIcon(icon2)
         self.button_copy.setIconSize(QSize(52, 52))
 
@@ -264,7 +264,7 @@ class Ui_MainWindow(object):
 "    margin-left: 0;\n"
 "}")
         icon3 = QIcon()
-        icon3.addFile(u":/icons/refreshicon.svg", QSize(), QIcon.Normal, QIcon.On)
+        icon3.addFile(u":/icons/refreshicon.svg", QSize(), QIcon.Normal, QIcon.On) #/refreshicon.svg
         self.button_refresh.setIcon(icon3)
         self.button_refresh.setIconSize(QSize(42, 42))
 
@@ -272,7 +272,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayoutWidget = QWidget(self.centralwidget)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(10, 250, 441, 51))
+        self.verticalLayoutWidget.setGeometry(QRect(10, 210, 441, 51))
         self.layout_info = QVBoxLayout(self.verticalLayoutWidget)
         self.layout_info.setObjectName(u"layout_info")
         self.layout_info.setContentsMargins(0, 0, 0, 0)
@@ -285,15 +285,6 @@ class Ui_MainWindow(object):
 
         self.layout_info.addWidget(self.label_strength)
 
-        self.icon_lock = QPushButton(self.centralwidget)
-        self.icon_lock.setObjectName(u"icon_lock")
-        self.icon_lock.setEnabled(False)
-        self.icon_lock.setGeometry(QRect(16, 17, 431, 101))
-        self.icon_lock.setStyleSheet(u"border: none;")
-        icon4 = QIcon()
-        icon4.addFile(u":/icons/mainicon.svg", QSize(), QIcon.Disabled, QIcon.On)
-        self.icon_lock.setIcon(icon4)
-        self.icon_lock.setIconSize(QSize(100, 100))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -311,6 +302,5 @@ class Ui_MainWindow(object):
         self.button_copy.setText("")
         self.button_refresh.setText("")
         self.label_strength.setText("")
-        self.icon_lock.setText("")
     # retranslateUi
 
