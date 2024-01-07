@@ -1,0 +1,8 @@
+Python version: 3.12.1
+PySide6 version: 6.6.1
+
+Internal libraries:
+- math (import log2)
+- enum (import IntEnum)
+- secrets 
+- string
